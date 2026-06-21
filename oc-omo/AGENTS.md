@@ -101,15 +101,15 @@ Inside the chat:
 
 ## Important configuration notes
 
-### Why `temperature: 1` on Moonshot models?
+### Why `temperature: 1` on Kimi/Moonshot models?
 
-Moonshot AI (`moonshotai/kimi-k2.6`, `moonshotai/kimi-k2.5`) only accepts `temperature=1`. OpenCode may send a different default otherwise, causing:
+Kimi/Moonshot models only accept `temperature=1`, including native Moonshot IDs (`moonshotai/kimi-k2.6`, `moonshotai/kimi-k2.5`) and wrapped Kimi routes such as `opencode-go/kimi-k2.6` or `opencode/kimi-k2.5`. OpenCode may send a different default otherwise, causing:
 
 ```
 invalid temperature: only 1 is allowed for this model
 ```
 
-Every `moonshotai/` model entry in `oh-my-openagent.json` has `"temperature": 1` set explicitly. Do NOT remove these.
+Every model entry in `oh-my-openagent.json` whose model string contains `kimi` or `moonshotai/` must have `"temperature": 1` set explicitly, including entries inside `fallback_models`. Do NOT remove these.
 
 ### No Claude subscription
 
@@ -133,7 +133,7 @@ The fallback chains are ordered as:
 
 | Issue | Fix |
 |-------|-----|
-| `invalid temperature` | Ensure `"temperature": 1` is set on every `moonshotai/` entry |
+| `invalid temperature` | Ensure `"temperature": 1` is set on every `kimi` / `moonshotai/` entry, including `fallback_models` |
 | `Plugin not found` | Run `npm install oh-my-openagent@latest` in `~/.config/opencode` |
 | `TUI plugin entry unresolvable` | Ensure `tui.json` contains `"plugin": []` (empty array) |
 | `Provider not found` | Verify env vars are exported and run `opencode providers list` |

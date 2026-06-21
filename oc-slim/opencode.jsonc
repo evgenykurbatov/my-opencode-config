@@ -1,0 +1,15 @@
+{
+  "plugin": [
+    "oh-my-opencode-slim"
+  ],
+  "$schema": "https://opencode.ai/config.json",
+  "agent": {
+    "explore": {
+      "disable": true
+    },
+    "general": {
+      "disable": true
+    }
+  },
+  "lsp": true
+}

@@ -1,11 +1,13 @@
 {
   "$schema": "https://unpkg.com/oh-my-opencode-slim@latest/oh-my-opencode-slim.schema.json",
-  "multiplexer": "auto",
+  "multiplexer": {
+    "type": "auto"
+  },
   "preset": "openai",
   "presets": {
     "openai": {
       "orchestrator": {
-        "model": "openai/gpt-5.5",
+        "model": "opencode/gpt-5.5",
         "variant": "medium",
         "skills": [
           "*"
@@ -16,7 +18,7 @@
         ]
       },
       "oracle": {
-        "model": "openai/gpt-5.5",
+        "model": "opencode/gpt-5.5",
         "variant": "high",
         "skills": [
           "simplify"
@@ -24,7 +26,7 @@
         "mcps": []
       },
       "librarian": {
-        "model": "openai/gpt-5.4-mini",
+        "model": "opencode/gpt-5.4-mini",
         "variant": "low",
         "skills": [],
         "mcps": [
@@ -34,19 +36,19 @@
         ]
       },
       "explorer": {
-        "model": "openai/gpt-5.4-mini",
+        "model": "opencode/gpt-5.4-mini",
         "variant": "low",
         "skills": [],
         "mcps": []
       },
       "designer": {
-        "model": "openai/gpt-5.4-mini",
+        "model": "opencode/gpt-5.4-mini",
         "variant": "medium",
         "skills": [],
         "mcps": []
       },
       "fixer": {
-        "model": "openai/gpt-5.5",
+        "model": "opencode/gpt-5.5",
         "variant": "low",
         "skills": [],
         "mcps": []
@@ -94,6 +96,7 @@
       "designer": {
         "model": "opencode-go/kimi-k2.6",
         "variant": "medium",
+        "temperature": 1,
         "skills": [],
         "mcps": []
       },
@@ -105,6 +108,7 @@
       },
       "observer": {
         "model": "opencode-go/kimi-k2.6",
+        "temperature": 1,
         "skills": [],
         "mcps": []
       }
