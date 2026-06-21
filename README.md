@@ -15,4 +15,4 @@ Following configs are available:
 - **default** is vanilla OpenCode
 - **gemini** is using Google Gemini provider directly
 - **omo** is using [Oh-My-OpenAgent](https://github.com/code-yeongyu/oh-my-openagent) plugin with default settings
-- **omo-slim** is for [Oh-My-Opencode-Slim](https://github.com/alvinunreal/oh-my-opencode-slim) plugin with default settings
+- **omo-slim** is for [Oh-My-OpenCode-Slim](https://github.com/alvinunreal/oh-my-opencode-slim) plugin with default settings
