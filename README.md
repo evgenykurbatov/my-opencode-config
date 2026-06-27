@@ -12,7 +12,7 @@ Edit `my-opencode-config/.env`, then run as
     my-opencode-config/oc [config]
 
 Following configs are available:
-- **oc-default** is vanilla OpenCode
+- **opencode** is vanilla OpenCode, copy this directory's content into `~/.config/opencode`
 - **gemini** is using Google Gemini provider directly
 - **oc-omo** is using [Oh-My-OpenAgent](https://github.com/code-yeongyu/oh-my-openagent) plugin with default settings
 - **oc-slim** is for [Oh-My-OpenCode-Slim](https://github.com/alvinunreal/oh-my-opencode-slim) plugin with default settings

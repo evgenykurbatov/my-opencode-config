@@ -5,7 +5,9 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 [ -f "$SCRIPT_DIR/.env" ] && . "$SCRIPT_DIR/.env"
 
 # Set configuration file
-[ -n "$1" ] && export OPENCODE_CONFIG_DIR="$SCRIPT_DIR/$1"
+[ -n "$1" ] \
+    && export OPENCODE_CONFIG_DIR="$SCRIPT_DIR/$1" \
+    && export OPENCODE_DISABLE_DEFAULT_PLUGINS=1
 
 # Background Orchestration Guide:
 # https://github.com/alvinunreal/oh-my-opencode-slim/blob/master/docs/background-orchestration.md
